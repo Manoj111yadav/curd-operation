@@ -1,0 +1,14 @@
+{% extends 'curdApp/base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-8 offset-2">
+        <h3 class="alert alert-info">UPDATE INFORMATION</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" class ="btn btn-success " value="Update">
+            <a href="{% url 'addandshow' %}" class ="btn btn-info">BACK</a>
+        </form>
+    </div>
+</div>
+{% endblock content %}
